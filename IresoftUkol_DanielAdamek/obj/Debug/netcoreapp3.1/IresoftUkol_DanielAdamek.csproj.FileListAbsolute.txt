@@ -1,0 +1,15 @@
+C:\Users\Administrator\Source\repos\IresoftUkol_DanielAdamek\IresoftUkol_DanielAdamek\bin\Debug\netcoreapp3.1\IresoftUkol_DanielAdamek.exe
+C:\Users\Administrator\Source\repos\IresoftUkol_DanielAdamek\IresoftUkol_DanielAdamek\bin\Debug\netcoreapp3.1\IresoftUkol_DanielAdamek.deps.json
+C:\Users\Administrator\Source\repos\IresoftUkol_DanielAdamek\IresoftUkol_DanielAdamek\bin\Debug\netcoreapp3.1\IresoftUkol_DanielAdamek.runtimeconfig.json
+C:\Users\Administrator\Source\repos\IresoftUkol_DanielAdamek\IresoftUkol_DanielAdamek\bin\Debug\netcoreapp3.1\IresoftUkol_DanielAdamek.runtimeconfig.dev.json
+C:\Users\Administrator\Source\repos\IresoftUkol_DanielAdamek\IresoftUkol_DanielAdamek\bin\Debug\netcoreapp3.1\IresoftUkol_DanielAdamek.dll
+C:\Users\Administrator\Source\repos\IresoftUkol_DanielAdamek\IresoftUkol_DanielAdamek\bin\Debug\netcoreapp3.1\IresoftUkol_DanielAdamek.pdb
+C:\Users\Administrator\Source\repos\IresoftUkol_DanielAdamek\IresoftUkol_DanielAdamek\obj\Debug\netcoreapp3.1\IresoftUkol_DanielAdamek.csproj.AssemblyReference.cache
+C:\Users\Administrator\Source\repos\IresoftUkol_DanielAdamek\IresoftUkol_DanielAdamek\obj\Debug\netcoreapp3.1\IresoftUkol_DanielAdamek.csproj.GenerateResource.cache
+C:\Users\Administrator\Source\repos\IresoftUkol_DanielAdamek\IresoftUkol_DanielAdamek\obj\Debug\netcoreapp3.1\IresoftUkol_DanielAdamek.AssemblyInfoInputs.cache
+C:\Users\Administrator\Source\repos\IresoftUkol_DanielAdamek\IresoftUkol_DanielAdamek\obj\Debug\netcoreapp3.1\IresoftUkol_DanielAdamek.AssemblyInfo.cs
+C:\Users\Administrator\Source\repos\IresoftUkol_DanielAdamek\IresoftUkol_DanielAdamek\obj\Debug\netcoreapp3.1\IresoftUkol_DanielAdamek.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Source\repos\IresoftUkol_DanielAdamek\IresoftUkol_DanielAdamek\obj\Debug\netcoreapp3.1\IresoftUkol_DanielAdamek.dll
+C:\Users\Administrator\Source\repos\IresoftUkol_DanielAdamek\IresoftUkol_DanielAdamek\obj\Debug\netcoreapp3.1\IresoftUkol_DanielAdamek.pdb
+C:\Users\Administrator\Source\repos\IresoftUkol_DanielAdamek\IresoftUkol_DanielAdamek\obj\Debug\netcoreapp3.1\IresoftUkol_DanielAdamek.genruntimeconfig.cache
+C:\Users\Administrator\Source\repos\IresoftUkol_DanielAdamek\IresoftUkol_DanielAdamek\obj\Debug\netcoreapp3.1\IresoftUkol_DanielAdamek.SimpleForm.resources
