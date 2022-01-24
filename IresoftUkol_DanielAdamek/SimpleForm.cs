@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using IresoftUkol_DanielAdamek.DTOs;
 
 namespace IresoftUkol_DanielAdamek
 {
@@ -20,42 +21,31 @@ namespace IresoftUkol_DanielAdamek
 
         private void LoadInputFileButton_Click(object sender, EventArgs e)
         {
-            if (this.InputFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                this.InputFileName.Text = InputFileDialog.FileName;
-                this.InputFileName.ForeColor = Color.Black;
-                CountStatistics();
-            }
+            ShowDialogAndSetLabel(InputFileDialog, InputFileName);
         }
 
         private void LoadOutputFileButton_Click(object sender, EventArgs e)
         {
-            if (this.OutputFileDialog.ShowDialog() == DialogResult.OK)
+            ShowDialogAndSetLabel(OutputFileDialog, OutputFileName);
+        }
+
+        //Custom
+        private void ShowDialogAndSetLabel(OpenFileDialog dialog, Label label)
+        {
+            if (dialog.ShowDialog() == DialogResult.OK)
             {
-                this.OutputFileName.Text = OutputFileDialog.FileName;
-                this.OutputFileName.ForeColor = Color.Black;
+                label.Text = dialog.FileName;
+                label.ForeColor = Color.Black;
             }
         }
 
-        private void CountStatistics()
+        private void CalculateStatistics_Click(object sender, EventArgs e)
         {
-            var lines = System.IO.File.ReadAllLines(InputFileDialog.FileName);
-            NumberOfRows.Text = lines.Length.ToString();
-            var words = new List<string>();
-            foreach (var line in lines)
-            {
-                if (line.Length > 0)
-                    words.AddRange(line.Split(" "));
-            }
-            NumberOfWords.Text = words.Count.ToString();
-            NumberOfSentences.Text = words.Count(x => x.EndsWith(".") || x.EndsWith("?") || x.EndsWith("!")).ToString();
-
-            var numberOfCharacters = 0;
-            foreach (var word in words)
-            {
-                numberOfCharacters += word.Length;
-            }
-            NumberOfCharacters.Text = numberOfCharacters.ToString();
+            var stats = Statistics.Calculate(InputFileDialog.FileName);
+            NumberOfRows.Text = stats.NumberOfRows.ToString();
+            NumberOfWords.Text = stats.NumberOfWords.ToString();
+            NumberOfSentences.Text = stats.NumberOfSentences.ToString();
+            NumberOfCharacters.Text = stats.NumberOfCharacters.ToString();
         }
     }
 }

@@ -36,15 +36,22 @@ namespace IresoftUkol_DanielAdamek
             this.InputFileName = new System.Windows.Forms.Label();
             this.OutputFileName = new System.Windows.Forms.Label();
             this.FileInfoGroupBox = new System.Windows.Forms.GroupBox();
-            this.NumberOfSentencesLabel = new System.Windows.Forms.Label();
-            this.NumberOfSentences = new System.Windows.Forms.Label();
-            this.NumberOfWordsLabel = new System.Windows.Forms.Label();
-            this.NumberOfWords = new System.Windows.Forms.Label();
-            this.NumberOfCharacterLabel = new System.Windows.Forms.Label();
-            this.NumberOfCharacters = new System.Windows.Forms.Label();
-            this.NumberOfRowsLabel = new System.Windows.Forms.Label();
+            this.CalculateStatistics = new System.Windows.Forms.Button();
             this.NumberOfRows = new System.Windows.Forms.Label();
+            this.NumberOfRowsLabel = new System.Windows.Forms.Label();
+            this.NumberOfCharacters = new System.Windows.Forms.Label();
+            this.NumberOfCharacterLabel = new System.Windows.Forms.Label();
+            this.NumberOfWords = new System.Windows.Forms.Label();
+            this.NumberOfWordsLabel = new System.Windows.Forms.Label();
+            this.NumberOfSentences = new System.Windows.Forms.Label();
+            this.NumberOfSentencesLabel = new System.Windows.Forms.Label();
+            this.ActionsGroupBox = new System.Windows.Forms.GroupBox();
+            this.CopyButton = new System.Windows.Forms.Button();
+            this.RemoveDiacriticsButton = new System.Windows.Forms.Button();
+            this.RemoveEmptyRowsButton = new System.Windows.Forms.Button();
+            this.SqueezeButton = new System.Windows.Forms.Button();
             this.FileInfoGroupBox.SuspendLayout();
+            this.ActionsGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // InputFileDialog
@@ -100,6 +107,7 @@ namespace IresoftUkol_DanielAdamek
             // 
             // FileInfoGroupBox
             // 
+            this.FileInfoGroupBox.Controls.Add(this.CalculateStatistics);
             this.FileInfoGroupBox.Controls.Add(this.NumberOfRows);
             this.FileInfoGroupBox.Controls.Add(this.NumberOfRowsLabel);
             this.FileInfoGroupBox.Controls.Add(this.NumberOfCharacters);
@@ -115,87 +123,147 @@ namespace IresoftUkol_DanielAdamek
             this.FileInfoGroupBox.TabStop = false;
             this.FileInfoGroupBox.Text = "File Informations";
             // 
-            // NumberOfSentencesLabel
+            // CalculateStatistics
             // 
-            this.NumberOfSentencesLabel.AutoSize = true;
-            this.NumberOfSentencesLabel.Location = new System.Drawing.Point(17, 33);
-            this.NumberOfSentencesLabel.Name = "NumberOfSentencesLabel";
-            this.NumberOfSentencesLabel.Size = new System.Drawing.Size(126, 15);
-            this.NumberOfSentencesLabel.TabIndex = 0;
-            this.NumberOfSentencesLabel.Text = "Number of sentences :";
-            // 
-            // NumberOfSentences
-            // 
-            this.NumberOfSentences.AutoSize = true;
-            this.NumberOfSentences.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.NumberOfSentences.Location = new System.Drawing.Point(148, 33);
-            this.NumberOfSentences.Name = "NumberOfSentences";
-            this.NumberOfSentences.Size = new System.Drawing.Size(13, 15);
-            this.NumberOfSentences.TabIndex = 1;
-            this.NumberOfSentences.Text = "0";
-            // 
-            // NumberOfWordsLabel
-            // 
-            this.NumberOfWordsLabel.AutoSize = true;
-            this.NumberOfWordsLabel.Location = new System.Drawing.Point(37, 48);
-            this.NumberOfWordsLabel.Name = "NumberOfWordsLabel";
-            this.NumberOfWordsLabel.Size = new System.Drawing.Size(106, 15);
-            this.NumberOfWordsLabel.TabIndex = 2;
-            this.NumberOfWordsLabel.Text = "Number of words :";
-            // 
-            // NumberOfWords
-            // 
-            this.NumberOfWords.AutoSize = true;
-            this.NumberOfWords.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.NumberOfWords.Location = new System.Drawing.Point(148, 48);
-            this.NumberOfWords.Name = "NumberOfWords";
-            this.NumberOfWords.Size = new System.Drawing.Size(13, 15);
-            this.NumberOfWords.TabIndex = 3;
-            this.NumberOfWords.Text = "0";
-            // 
-            // NumberOfCharacterLabel
-            // 
-            this.NumberOfCharacterLabel.AutoSize = true;
-            this.NumberOfCharacterLabel.Location = new System.Drawing.Point(15, 63);
-            this.NumberOfCharacterLabel.Name = "NumberOfCharacterLabel";
-            this.NumberOfCharacterLabel.Size = new System.Drawing.Size(128, 15);
-            this.NumberOfCharacterLabel.TabIndex = 4;
-            this.NumberOfCharacterLabel.Text = "Number of characters :";
-            // 
-            // NumberOfCharacters
-            // 
-            this.NumberOfCharacters.AutoSize = true;
-            this.NumberOfCharacters.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.NumberOfCharacters.Location = new System.Drawing.Point(148, 63);
-            this.NumberOfCharacters.Name = "NumberOfCharacters";
-            this.NumberOfCharacters.Size = new System.Drawing.Size(13, 15);
-            this.NumberOfCharacters.TabIndex = 5;
-            this.NumberOfCharacters.Text = "0";
-            // 
-            // NumberOfRowsLabel
-            // 
-            this.NumberOfRowsLabel.AutoSize = true;
-            this.NumberOfRowsLabel.Location = new System.Drawing.Point(43, 78);
-            this.NumberOfRowsLabel.Name = "NumberOfRowsLabel";
-            this.NumberOfRowsLabel.Size = new System.Drawing.Size(99, 15);
-            this.NumberOfRowsLabel.TabIndex = 6;
-            this.NumberOfRowsLabel.Text = "Number of rows :";
+            this.CalculateStatistics.Location = new System.Drawing.Point(18, 23);
+            this.CalculateStatistics.Name = "CalculateStatistics";
+            this.CalculateStatistics.Size = new System.Drawing.Size(96, 23);
+            this.CalculateStatistics.TabIndex = 8;
+            this.CalculateStatistics.Text = "Get file info";
+            this.CalculateStatistics.UseVisualStyleBackColor = true;
+            this.CalculateStatistics.Click += new System.EventHandler(this.CalculateStatistics_Click);
             // 
             // NumberOfRows
             // 
             this.NumberOfRows.AutoSize = true;
             this.NumberOfRows.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.NumberOfRows.Location = new System.Drawing.Point(148, 78);
+            this.NumberOfRows.Location = new System.Drawing.Point(149, 103);
             this.NumberOfRows.Name = "NumberOfRows";
             this.NumberOfRows.Size = new System.Drawing.Size(13, 15);
             this.NumberOfRows.TabIndex = 7;
             this.NumberOfRows.Text = "0";
+            // 
+            // NumberOfRowsLabel
+            // 
+            this.NumberOfRowsLabel.AutoSize = true;
+            this.NumberOfRowsLabel.Location = new System.Drawing.Point(44, 103);
+            this.NumberOfRowsLabel.Name = "NumberOfRowsLabel";
+            this.NumberOfRowsLabel.Size = new System.Drawing.Size(99, 15);
+            this.NumberOfRowsLabel.TabIndex = 6;
+            this.NumberOfRowsLabel.Text = "Number of rows :";
+            // 
+            // NumberOfCharacters
+            // 
+            this.NumberOfCharacters.AutoSize = true;
+            this.NumberOfCharacters.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.NumberOfCharacters.Location = new System.Drawing.Point(149, 88);
+            this.NumberOfCharacters.Name = "NumberOfCharacters";
+            this.NumberOfCharacters.Size = new System.Drawing.Size(13, 15);
+            this.NumberOfCharacters.TabIndex = 5;
+            this.NumberOfCharacters.Text = "0";
+            // 
+            // NumberOfCharacterLabel
+            // 
+            this.NumberOfCharacterLabel.AutoSize = true;
+            this.NumberOfCharacterLabel.Location = new System.Drawing.Point(16, 88);
+            this.NumberOfCharacterLabel.Name = "NumberOfCharacterLabel";
+            this.NumberOfCharacterLabel.Size = new System.Drawing.Size(128, 15);
+            this.NumberOfCharacterLabel.TabIndex = 4;
+            this.NumberOfCharacterLabel.Text = "Number of characters :";
+            // 
+            // NumberOfWords
+            // 
+            this.NumberOfWords.AutoSize = true;
+            this.NumberOfWords.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.NumberOfWords.Location = new System.Drawing.Point(149, 73);
+            this.NumberOfWords.Name = "NumberOfWords";
+            this.NumberOfWords.Size = new System.Drawing.Size(13, 15);
+            this.NumberOfWords.TabIndex = 3;
+            this.NumberOfWords.Text = "0";
+            // 
+            // NumberOfWordsLabel
+            // 
+            this.NumberOfWordsLabel.AutoSize = true;
+            this.NumberOfWordsLabel.Location = new System.Drawing.Point(38, 73);
+            this.NumberOfWordsLabel.Name = "NumberOfWordsLabel";
+            this.NumberOfWordsLabel.Size = new System.Drawing.Size(106, 15);
+            this.NumberOfWordsLabel.TabIndex = 2;
+            this.NumberOfWordsLabel.Text = "Number of words :";
+            // 
+            // NumberOfSentences
+            // 
+            this.NumberOfSentences.AutoSize = true;
+            this.NumberOfSentences.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.NumberOfSentences.Location = new System.Drawing.Point(149, 58);
+            this.NumberOfSentences.Name = "NumberOfSentences";
+            this.NumberOfSentences.Size = new System.Drawing.Size(13, 15);
+            this.NumberOfSentences.TabIndex = 1;
+            this.NumberOfSentences.Text = "0";
+            // 
+            // NumberOfSentencesLabel
+            // 
+            this.NumberOfSentencesLabel.AutoSize = true;
+            this.NumberOfSentencesLabel.Location = new System.Drawing.Point(18, 58);
+            this.NumberOfSentencesLabel.Name = "NumberOfSentencesLabel";
+            this.NumberOfSentencesLabel.Size = new System.Drawing.Size(126, 15);
+            this.NumberOfSentencesLabel.TabIndex = 0;
+            this.NumberOfSentencesLabel.Text = "Number of sentences :";
+            // 
+            // ActionsGroupBox
+            // 
+            this.ActionsGroupBox.Controls.Add(this.SqueezeButton);
+            this.ActionsGroupBox.Controls.Add(this.RemoveEmptyRowsButton);
+            this.ActionsGroupBox.Controls.Add(this.RemoveDiacriticsButton);
+            this.ActionsGroupBox.Controls.Add(this.CopyButton);
+            this.ActionsGroupBox.Location = new System.Drawing.Point(325, 70);
+            this.ActionsGroupBox.Name = "ActionsGroupBox";
+            this.ActionsGroupBox.Size = new System.Drawing.Size(263, 264);
+            this.ActionsGroupBox.TabIndex = 7;
+            this.ActionsGroupBox.TabStop = false;
+            this.ActionsGroupBox.Text = "Actions";
+            // 
+            // CopyButton
+            // 
+            this.CopyButton.Location = new System.Drawing.Point(90, 50);
+            this.CopyButton.Name = "CopyButton";
+            this.CopyButton.Size = new System.Drawing.Size(75, 23);
+            this.CopyButton.TabIndex = 0;
+            this.CopyButton.Text = "Copy";
+            this.CopyButton.UseVisualStyleBackColor = true;
+            // 
+            // RemoveDiacriticsButton
+            // 
+            this.RemoveDiacriticsButton.Location = new System.Drawing.Point(49, 79);
+            this.RemoveDiacriticsButton.Name = "RemoveDiacriticsButton";
+            this.RemoveDiacriticsButton.Size = new System.Drawing.Size(158, 23);
+            this.RemoveDiacriticsButton.TabIndex = 1;
+            this.RemoveDiacriticsButton.Text = "Remove diacritics";
+            this.RemoveDiacriticsButton.UseVisualStyleBackColor = true;
+            // 
+            // RemoveEmptyRowsButton
+            // 
+            this.RemoveEmptyRowsButton.Location = new System.Drawing.Point(49, 109);
+            this.RemoveEmptyRowsButton.Name = "RemoveEmptyRowsButton";
+            this.RemoveEmptyRowsButton.Size = new System.Drawing.Size(158, 23);
+            this.RemoveEmptyRowsButton.TabIndex = 2;
+            this.RemoveEmptyRowsButton.Text = "Remove empty rows";
+            this.RemoveEmptyRowsButton.UseVisualStyleBackColor = true;
+            // 
+            // SqueezeButton
+            // 
+            this.SqueezeButton.Location = new System.Drawing.Point(21, 138);
+            this.SqueezeButton.Name = "SqueezeButton";
+            this.SqueezeButton.Size = new System.Drawing.Size(208, 23);
+            this.SqueezeButton.TabIndex = 3;
+            this.SqueezeButton.Text = "Remove spaces and interpuntion";
+            this.SqueezeButton.UseVisualStyleBackColor = true;
             // 
             // SimpleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ActionsGroupBox);
             this.Controls.Add(this.FileInfoGroupBox);
             this.Controls.Add(this.OutputFileName);
             this.Controls.Add(this.InputFileName);
@@ -206,6 +274,7 @@ namespace IresoftUkol_DanielAdamek
             this.Load += new System.EventHandler(this.SimpleForm_Load);
             this.FileInfoGroupBox.ResumeLayout(false);
             this.FileInfoGroupBox.PerformLayout();
+            this.ActionsGroupBox.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -228,6 +297,12 @@ namespace IresoftUkol_DanielAdamek
         private System.Windows.Forms.Label NumberOfSentences;
         private System.Windows.Forms.Label NumberOfSentencesLabel;
         private System.Windows.Forms.Label NumberOfRows;
+        private System.Windows.Forms.Button CalculateStatistics;
+        private System.Windows.Forms.GroupBox ActionsGroupBox;
+        private System.Windows.Forms.Button SqueezeButton;
+        private System.Windows.Forms.Button RemoveEmptyRowsButton;
+        private System.Windows.Forms.Button RemoveDiacriticsButton;
+        private System.Windows.Forms.Button CopyButton;
     }
 }
 
