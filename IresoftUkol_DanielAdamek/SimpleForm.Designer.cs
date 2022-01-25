@@ -46,10 +46,10 @@ namespace IresoftUkol_DanielAdamek
             this.NumberOfSentences = new System.Windows.Forms.Label();
             this.NumberOfSentencesLabel = new System.Windows.Forms.Label();
             this.ActionsGroupBox = new System.Windows.Forms.GroupBox();
-            this.CopyButton = new System.Windows.Forms.Button();
-            this.RemoveDiacriticsButton = new System.Windows.Forms.Button();
-            this.RemoveEmptyRowsButton = new System.Windows.Forms.Button();
             this.SqueezeButton = new System.Windows.Forms.Button();
+            this.RemoveEmptyRowsButton = new System.Windows.Forms.Button();
+            this.RemoveDiacriticsButton = new System.Windows.Forms.Button();
+            this.CopyButton = new System.Windows.Forms.Button();
             this.FileInfoGroupBox.SuspendLayout();
             this.ActionsGroupBox.SuspendLayout();
             this.SuspendLayout();
@@ -222,23 +222,15 @@ namespace IresoftUkol_DanielAdamek
             this.ActionsGroupBox.TabStop = false;
             this.ActionsGroupBox.Text = "Actions";
             // 
-            // CopyButton
+            // SqueezeButton
             // 
-            this.CopyButton.Location = new System.Drawing.Point(90, 50);
-            this.CopyButton.Name = "CopyButton";
-            this.CopyButton.Size = new System.Drawing.Size(75, 23);
-            this.CopyButton.TabIndex = 0;
-            this.CopyButton.Text = "Copy";
-            this.CopyButton.UseVisualStyleBackColor = true;
-            // 
-            // RemoveDiacriticsButton
-            // 
-            this.RemoveDiacriticsButton.Location = new System.Drawing.Point(49, 79);
-            this.RemoveDiacriticsButton.Name = "RemoveDiacriticsButton";
-            this.RemoveDiacriticsButton.Size = new System.Drawing.Size(158, 23);
-            this.RemoveDiacriticsButton.TabIndex = 1;
-            this.RemoveDiacriticsButton.Text = "Remove diacritics";
-            this.RemoveDiacriticsButton.UseVisualStyleBackColor = true;
+            this.SqueezeButton.Location = new System.Drawing.Point(21, 138);
+            this.SqueezeButton.Name = "SqueezeButton";
+            this.SqueezeButton.Size = new System.Drawing.Size(208, 23);
+            this.SqueezeButton.TabIndex = 3;
+            this.SqueezeButton.Text = "Remove spaces and interpuntion";
+            this.SqueezeButton.UseVisualStyleBackColor = true;
+            this.SqueezeButton.Click += new System.EventHandler(this.SqueezeButton_Click);
             // 
             // RemoveEmptyRowsButton
             // 
@@ -248,15 +240,27 @@ namespace IresoftUkol_DanielAdamek
             this.RemoveEmptyRowsButton.TabIndex = 2;
             this.RemoveEmptyRowsButton.Text = "Remove empty rows";
             this.RemoveEmptyRowsButton.UseVisualStyleBackColor = true;
+            this.RemoveEmptyRowsButton.Click += new System.EventHandler(this.RemoveEmptyRowsButton_Click);
             // 
-            // SqueezeButton
+            // RemoveDiacriticsButton
             // 
-            this.SqueezeButton.Location = new System.Drawing.Point(21, 138);
-            this.SqueezeButton.Name = "SqueezeButton";
-            this.SqueezeButton.Size = new System.Drawing.Size(208, 23);
-            this.SqueezeButton.TabIndex = 3;
-            this.SqueezeButton.Text = "Remove spaces and interpuntion";
-            this.SqueezeButton.UseVisualStyleBackColor = true;
+            this.RemoveDiacriticsButton.Location = new System.Drawing.Point(49, 79);
+            this.RemoveDiacriticsButton.Name = "RemoveDiacriticsButton";
+            this.RemoveDiacriticsButton.Size = new System.Drawing.Size(158, 23);
+            this.RemoveDiacriticsButton.TabIndex = 1;
+            this.RemoveDiacriticsButton.Text = "Remove diacritics";
+            this.RemoveDiacriticsButton.UseVisualStyleBackColor = true;
+            this.RemoveDiacriticsButton.Click += new System.EventHandler(this.RemoveDiacriticsButton_Click);
+            // 
+            // CopyButton
+            // 
+            this.CopyButton.Location = new System.Drawing.Point(90, 50);
+            this.CopyButton.Name = "CopyButton";
+            this.CopyButton.Size = new System.Drawing.Size(75, 23);
+            this.CopyButton.TabIndex = 0;
+            this.CopyButton.Text = "Copy";
+            this.CopyButton.UseVisualStyleBackColor = true;
+            this.CopyButton.Click += new System.EventHandler(this.CopyButton_Click);
             // 
             // SimpleForm
             // 
